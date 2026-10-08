@@ -196,57 +196,53 @@ button {
 }
 
 /* Favorites Sidebar */
-.favorites-sidebar {
-  background: var(--glass-panel);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  width: 100%;
-  max-width: 350px;
-  position: sticky;
-  top: 1.5rem;
-  height: fit-content;
-}
-
-.favorites-sidebar h2 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.25rem;
-  color: var(--accent-cyan);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.75rem;
-}
-
 .favorite-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+  min-height: 110px;
+}
+
+.favorite-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.favorite-item div {
+  flex: 1;
+  min-width: 0;
 }
 
 .favorite-item h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.favorite-item p {
   margin: 0;
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: #00d9ff;
+  font-weight: bold;
 }
 
 .favorite-item button {
-  width: auto;
-  margin: 0;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.75rem;
-  background: rgba(244, 63, 94, 0.1);
-  color: var(--danger);
-  border: 1px solid var(--danger);
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid #ff3b5c;
+  border-radius: 20px;
+  background: transparent;
+  color: #ff3b5c;
+  cursor: pointer;
 }
 
 .favorite-item button:hover {
-  background: var(--danger);
+  background: #ff3b5c;
   color: white;
-  box-shadow: 0 0 10px rgba(244, 63, 94, 0.4);
 }
 
 

@@ -69,8 +69,18 @@ function displayFavorites() {
 
   favoritesContainer.innerHTML = state.wishlist.map((item) => `
     <div class="favorite-item">
-      <h4>${item.title} - $${item.price}</h4>
-      <button onclick="removeFromFavorites(${item.id})">Remove</button>
+
+      <img src="${item.thumbnail}" alt="${item.title}">
+
+      <div>
+        <h4>${item.title}</h4>
+        <p>$${item.price}</p>
+      </div>
+
+      <button onclick="removeFromFavorites(${item.id})">
+        Remove
+      </button>
+
     </div>
   `).join("");
 }
